@@ -1,0 +1,59 @@
+site_name: Study MkDocs
+site_url: http://127.0.0.1/
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.footnote.tooltips
+    - content.tooltips
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.footer
+    - navigation.expand
+
+nav:
+  - 'how-to-start.md'
+  - 'page-conf.md'
+  - 'markdown.md'
+  - 'markdown-extensions.md'
+  - 'material-for-mkdocs-extensions.md'
+  - Visual Studio Codeの設定: 'vscode-settings.md'
+  - 'vs.md'
+  - フォルダ:
+    - sub/index.md
+    - sub/index2.md
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - codehilite:
+      noclasses: true
+      pygments_style: colorful
+      linenums: false
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
